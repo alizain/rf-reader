@@ -1,0 +1,8 @@
+DeviceName : first, has been added successfully.
+DevicePort : COM1, has been added successfully.
+ID : 1530054 has been scanned on Port : COM1 at 15-Oct-19 4:03:55 PM
+DeviceName : first, has been added successfully.
+DevicePort : COM2, has been added successfully.
+ID : 1505391 has been scanned on Port : COM2 at 15-Oct-19 4:06:49 PM
+DeviceName : first, has been added successfully.
+DevicePort : COM1, has been added successfully.

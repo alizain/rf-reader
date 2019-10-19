@@ -1,0 +1,25 @@
+DeviceName : checkintb, has been added successfully.
+DevicePort : COM1, has been added successfully.
+DeviceName : checkouttb, has been added successfully.
+DevicePort : COM2, has been added successfully.
+DeviceName : checkinttb, has been added successfully.
+DevicePort : COM5, has been added successfully.
+ID : 1507213 has been scanned on Port : COM2 at 16-Oct-19 12:09:07 PM
+ID : 1530054 has been scanned on Port : COM5 at 16-Oct-19 12:09:20 PM
+ID : 1507213 has been scanned on Port : COM1 at 16-Oct-19 12:10:01 PM
+ID : 1505391 has been scanned on Port : COM6 at 16-Oct-19 12:10:05 PM
+ID : 1530054 has been scanned on Port : COM5 at 16-Oct-19 12:10:18 PM
+checkinttb is not a valid table name on COM5 Port at (16-Oct-19 12:10:46 PM)
+checkinttb is not a valid table name on COM5 Port at (16-Oct-19 12:11:17 PM)
+Database connection successfull at (16-Oct-19 12:12:12 PM)
+Live is Started ...! (16-Oct-19 12:12:24 PM)
+1507213 Insert in database successfully & in Port : COM1
+ID : 1507213 has been Scan at 16-Oct-19 12:13:03 PM
+1505391 Insert in database successfully & in Port : COM5
+ID : 1505391 has been Scan at 16-Oct-19 12:13:37 PM
+1530054 Insert in database successfully & in Port : COM6
+ID : 1530054 has been Scan at 16-Oct-19 12:14:25 PM
+1507213 Insert in database successfully & in Port : COM2
+ID : 1507213 has been Scan at 16-Oct-19 12:14:53 PM
+1505391 Insert in database successfully & in Port : COM6
+ID : 1505391 has been Scan at 16-Oct-19 12:16:59 PM

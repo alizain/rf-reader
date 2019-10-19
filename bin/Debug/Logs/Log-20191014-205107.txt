@@ -1,0 +1,5 @@
+DeviceName has been changed checkintb to checkouttbtr successfully
+DevicePort has been changed COM1 to COM2 successfully
+DeviceName has been changed checkouttbtr to checkintbdb successfully
+DevicePort has been changed COM2 to COM1 successfully
+DeviceName has been changed checkouttbtr to checkouttbtrdbdb successfully

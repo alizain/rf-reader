@@ -1,0 +1,239 @@
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe.config
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csprojResolveAssemblyReference.cache
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.g.cs
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.g.cs
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.g.cs
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\App.g.cs
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.cache
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.lref
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.baml
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.baml
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.baml
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.g.resources
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.Properties.Resources.resources
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csproj.GenerateResource.Cache
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.exe
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.pdb
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.pdb
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.g.cs
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.baml
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.g.cs
+C:\Users\Superman\documents\visual studio 2015\Projects\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.baml
+C:\Users\Superman\Documents\Visual Studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Superman\Documents\Visual Studio 2015\Projects\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.xml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe.config
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.exe
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.pdb
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.pdb
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.Toolkit.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.pdb
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.xml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.g.cs
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.g.cs
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.g.cs
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.g.cs
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.g.cs
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\App.g.cs
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.cache
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.lref
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.baml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.baml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.baml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.baml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.baml
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.g.resources
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.Properties.Resources.resources
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csproj.GenerateResource.Cache
+F:\Saad Bin Irshad\From Salman\RF Reader New (20-Sep-2019)\Salman Tahir1\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csprojResolveAssemblyReference.cache
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe.config
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.exe
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.pdb
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.pdb
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.pdb
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csprojResolveAssemblyReference.cache
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.g.cs
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.g.cs
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.g.cs
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.g.cs
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.g.cs
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\App.g.cs
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.cache
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.lref
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.baml
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.baml
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.baml
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.baml
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.baml
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.g.resources
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.Properties.Resources.resources
+C:\Users\viftech\Documents\My Received Files\SAAD-BIN-IRSHAD\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csproj.GenerateResource.Cache
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe.config
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.exe
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.pdb
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.pdb
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.Toolkit.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.pdb
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.xml
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csprojResolveAssemblyReference.cache
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.g.cs
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.g.cs
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.g.cs
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.g.cs
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.g.cs
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\App.g.cs
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.cache
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.lref
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.baml
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\wind_DbConfigShow.baml
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_DatabaseConfig.baml
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.baml
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\win_ReaderConfig.baml
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.g.resources
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.Properties.Resources.resources
+F:\Saad Bin Irshad\From Riaz Bhai\rhussain\RfReader_demo (01-Oct-2019)\RfReader_demo\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csproj.GenerateResource.Cache
+F:\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe.config
+F:\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.exe
+F:\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.pdb
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe.config
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.exe
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.pdb
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.pdb
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Xceed.Wpf.Toolkit.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignColors.pdb
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Newtonsoft.Json.xml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csprojResolveAssemblyReference.cache
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.g.cs
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.g.cs
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\App.g.cs
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.cache
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo_MarkupCompile.lref
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\MainWindow.baml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\win_PasswordChange.baml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.g.resources
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.Properties.Resources.resources
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.csproj.GenerateResource.Cache
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\SplashScreen.g.cs
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\SplashScreen.baml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\Login.g.cs
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\Login.baml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Sentry.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Sentry.PlatformAbstractions.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Sentry.Protocol.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\System.Collections.Immutable.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Sentry.pdb
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Sentry.xml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Sentry.Protocol.pdb
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Sentry.Protocol.xml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\System.Collections.Immutable.xml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\SharpRaven.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Nancy.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\SharpRaven.Nancy.dll
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\Nancy.xml
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.exe.manifest
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\bin\Debug\RfReader_demo.application
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.exe.manifest
+F:\Saad Bin Irshad\Project\RfReader_Demo New\RF Reader\RfReader_demo\RfReader_demo\obj\Debug\RfReader_demo.application

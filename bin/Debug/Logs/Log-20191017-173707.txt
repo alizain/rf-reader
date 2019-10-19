@@ -1,0 +1,25 @@
+Table Name : third with Port COM5, has been added successfully.
+
+ID : 1507213 has been scanned on Port : COM5 at 17-Oct-19 5:37:41 PM
+Table Name : third with Port COM5, has been deleted successfully.
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:38:11 PM
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:38:27 PM
+ID : 1530054 has been scanned on Port : COM2 at 17-Oct-19 5:38:30 PM
+first is not a valid table name on COM1 Port at (17-Oct-19 5:38:59 PM)
+DeviceName has been changed first to checkintb successfully
+second is not a valid table name on COM2 Port at (17-Oct-19 5:39:25 PM)
+DeviceName has been changed second to checkouttb successfully
+Database connection successfull at (17-Oct-19 5:39:48 PM)
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:40:03 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:40:04 PM
+ID : 1505391 has been scanned on Port : COM2 at 17-Oct-19 5:40:11 PM
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:40:16 PM
+Database connection successfull at (17-Oct-19 5:40:44 PM)
+Live is Started ...! (17-Oct-19 5:40:46 PM)
+1505391 Insert in database successfully & in Port : COM1
+ID : 1505391 has been Scan at 17-Oct-19 5:40:52 PM
+1507213 Insert in database successfully & in Port : COM2
+ID : 1507213 has been Scan at 17-Oct-19 5:40:55 PM
+Live is Stopped ...! (17-Oct-19 5:41:44 PM)
+ID : 1530054 has been scanned on Port : COM2 at 17-Oct-19 5:41:46 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:41:47 PM

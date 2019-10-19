@@ -1,0 +1,5 @@
+Live is Started ...! (14-Oct-19 2:50:36 PM)
+1530054 Insert in database successfully & in Port : COM2
+ID : 1530054 has been Scan at 14-Oct-19 2:50:40 PM
+1505391 Insert in database successfully & in Port : COM1
+ID : 1505391 has been Scan at 14-Oct-19 2:50:43 PM

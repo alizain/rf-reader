@@ -1,0 +1,15 @@
+Password has been changed ******* to ******* successfully17-Oct-19 5:56:38 PM
+Database connection failed at (17-Oct-19 5:56:50 PM)
+Password has been changed ******* to ******* successfully17-Oct-19 5:56:58 PM
+Table Name : checkouttb with Port COM6, has been deleted successfully.
+Table Name : checkintb with Port COM5, has been deleted successfully.
+Table Name : checkintb with Port COM5, has been added successfully.
+
+ID : 1507213 has been scanned on Port : COM5 at 17-Oct-19 5:58:52 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:59:07 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:59:07 PM
+Live is Started ...! (17-Oct-19 5:59:13 PM)
+1507213 Insert in database successfully & in Port : COM5
+ID : 1507213 has been Scan at 17-Oct-19 5:59:16 PM
+1505391 Insert in database successfully & in Port : COM1
+ID : 1505391 has been Scan at 17-Oct-19 5:59:21 PM

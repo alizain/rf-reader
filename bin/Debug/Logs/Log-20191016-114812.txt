@@ -1,0 +1,20 @@
+ID : 1507213 has been scanned on Port : COM5 at 16-Oct-19 11:48:50 AM
+ID : 1507213 has been scanned on Port : COM2 at 16-Oct-19 11:54:06 AM
+ID : 1530054 has been scanned on Port : COM2 at 16-Oct-19 11:54:19 AM
+ID : 1530054 has been scanned on Port : COM5 at 16-Oct-19 11:54:26 AM
+ID : 1507213 has been scanned on Port : COM5 at 16-Oct-19 11:54:33 AM
+ID : 1530054 has been scanned on Port : COM5 at 16-Oct-19 11:55:41 AM
+ID : 1505391 has been scanned on Port : COM5 at 16-Oct-19 11:55:52 AM
+ID : 1530054 has been scanned on Port : COM6 at 16-Oct-19 11:57:08 AM
+ID : 1505391 has been scanned on Port : COM6 at 16-Oct-19 11:57:13 AM
+ID : 1505391 has been scanned on Port : COM2 at 16-Oct-19 11:58:01 AM
+DevicePort has been changed COM6 to COM5 successfully
+ID : 1530054 has been scanned on Port : COM5 at 16-Oct-19 11:59:34 AM
+ID : 1507213 has been scanned on Port : COM5 at 16-Oct-19 11:59:43 AM
+ID : 1530054 has been scanned on Port : COM6 at 16-Oct-19 12:01:02 PM
+ID : 1507213 has been scanned on Port : COM6 at 16-Oct-19 12:01:16 PM
+ID : 1507213 has been scanned on Port : COM5 at 16-Oct-19 12:01:28 PM
+ID : 1530054 has been scanned on Port : COM5 at 16-Oct-19 12:01:37 PM
+ID : 1505391 has been scanned on Port : COM6 at 16-Oct-19 12:02:34 PM
+ID : 1507213 has been scanned on Port : COM5 at 16-Oct-19 12:03:34 PM
+ID : 1505391 has been scanned on Port : COM5 at 16-Oct-19 12:03:43 PM

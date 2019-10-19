@@ -1,0 +1,4 @@
+ID : 1530054 has been scanned on Port : COM2 at 15-Oct-19 8:53:41 PM
+ID : 1530054 has been scanned on Port : COM2 at 15-Oct-19 8:54:06 PM
+ID : 1505391 has been scanned on Port : COM1 at 15-Oct-19 8:54:18 PM
+ID : 1530054 has been scanned on Port : COM2 at 15-Oct-19 8:54:56 PM

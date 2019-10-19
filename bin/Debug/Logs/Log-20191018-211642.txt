@@ -1,0 +1,3 @@
+Access to the port 'COM1' is denied.
+Access to the port 'COM2' is denied.
+Access to the port 'COM5' is denied.

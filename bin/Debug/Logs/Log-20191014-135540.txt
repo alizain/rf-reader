@@ -1,0 +1,10 @@
+Live is Stopped ...! (14-Oct-19 1:55:44 PM)
+Live is Started ...! (14-Oct-19 1:55:47 PM)
+Live is Stopped ...! (14-Oct-19 1:55:48 PM)
+ID : 1530054 has been scanned at 14-Oct-19 1:55:49 PM
+Live is Started ...! (14-Oct-19 1:55:51 PM)
+ID : 1530054 has been scanned at 14-Oct-19 1:55:52 PM
+ID : 1530054 has been scanned at 14-Oct-19 1:55:55 PM
+ID : 1507213 has been scanned at 14-Oct-19 1:55:58 PM
+ID : 1507213 has been scanned at 14-Oct-19 1:56:11 PM
+ID : 1507213 has been scanned at 14-Oct-19 1:56:45 PM

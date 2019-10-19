@@ -1,0 +1,15 @@
+ID : 1507213 has been scanned on Port : COM5 (18-Oct-19 1:29:42 PM)
+Live is Started ...! (18-Oct-19 1:30:18 PM)
+ID : 1507213 has been scanned on Port : COM5 (18-Oct-19 1:30:35 PM)
+1507213 Insertion in database failed & with Port : COM5 (18-Oct-19 1:30:52 PM) 
+ Error: ORA-00942: table or view does not exist
+
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 1:32:33 PM)
+ID : 1530054 has been scanned on Port : COM5 (18-Oct-19 1:33:18 PM)
+1530054 Insertion in database failed & with Port : COM5 (18-Oct-19 1:33:20 PM) 
+ Error: ORA-00942: table or view does not exist
+
+ID : 1505391 has been scanned on Port : COM5 (18-Oct-19 1:33:37 PM)
+1505391 Insertion in database failed & with Port : COM5 (18-Oct-19 1:33:40 PM) 
+ Error: ORA-00942: table or view does not exist
+

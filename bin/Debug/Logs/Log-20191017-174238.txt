@@ -1,0 +1,14 @@
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:42:40 PM
+ID : 1530054 has been scanned on Port : COM2 at 17-Oct-19 5:42:42 PM
+ID : 1505391 has been scanned on Port : COM1 at 17-Oct-19 5:42:45 PM
+ID : 1505391 has been scanned on Port : COM1 at 17-Oct-19 5:42:45 PM
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:42:46 PM
+ID : 1530054 has been scanned on Port : COM2 at 17-Oct-19 5:42:47 PM
+ID : 1505391 has been scanned on Port : COM2 at 17-Oct-19 5:42:48 PM
+ID : 1505391 has been scanned on Port : COM1 at 17-Oct-19 5:42:50 PM
+ID : 1530054 has been scanned on Port : COM2 at 17-Oct-19 5:42:51 PM
+ID : 1530054 has been scanned on Port : COM2 at 17-Oct-19 5:42:51 PM
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:42:58 PM
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:43:00 PM
+ID : 1505391 has been scanned on Port : COM2 at 17-Oct-19 5:43:02 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:43:04 PM

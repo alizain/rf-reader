@@ -1,0 +1,10 @@
+ID : 1505391 has been scanned at 14-Oct-19 2:33:55 PM
+ID : 1530054 has been scanned at 14-Oct-19 2:33:58 PM
+Live is Started ...! (14-Oct-19 2:34:01 PM)
+1505391 Insert in database successfully
+ID : 1505391 has been Scan at 14-Oct-19 2:34:05 PM
+1530054 Insert in database successfully
+ID : 1530054 has been Scan at 14-Oct-19 2:34:06 PM
+Live is Stopped ...! (14-Oct-19 2:34:54 PM)
+ID : 1505391 has been scanned at 14-Oct-19 2:34:56 PM
+ID : 1530054 has been scanned at 14-Oct-19 2:34:59 PM

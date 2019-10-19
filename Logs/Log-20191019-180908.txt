@@ -1,0 +1,9 @@
+IPAddress : 192.168.0.201, has been added successfully.
+PortNumber : 1521, has been added successfully.
+ServerName : ORCL, has been added successfully.
+DatabaseName : , has been added successfully.
+Username : system, has been added successfully.
+Password : *******, has been added successfully.19-Oct-19 6:09:40 PM
+Table Name : checkintb with Port COM1, has been added successfully.
+Database connection successfull. (19-Oct-19 6:09:45 PM)
+Database connection successfull. (19-Oct-19 6:20:12 PM)

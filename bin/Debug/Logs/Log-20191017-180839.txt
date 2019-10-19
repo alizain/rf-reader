@@ -1,0 +1,17 @@
+Password has been changed ******* to ******* successfully17-Oct-19 6:09:22 PM
+Table Name : checkintb with Port COM5, has been added successfully.
+
+Database connection successfull at (17-Oct-19 6:13:09 PM)
+Password has been changed ******* to ******* successfully17-Oct-19 6:13:31 PM
+Database connection failed at (17-Oct-19 6:13:35 PM)
+Password has been changed ******* to ******* successfully17-Oct-19 6:14:52 PM
+ID : 1507213 has been scanned on Port : COM5 at 17-Oct-19 6:14:57 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 6:15:09 PM
+Live is Started ...! (17-Oct-19 6:15:23 PM)
+1507213 Insert in database successfully & in Port : COM5
+ID : 1507213 has been Scan at 17-Oct-19 6:15:30 PM
+1505391 Insert in database successfully & in Port : COM1
+ID : 1505391 has been Scan at 17-Oct-19 6:15:34 PM
+ORA-12535: TNS:operation timed out
+
+ID : 1507213 has been scanned on Port : COM5 at 17-Oct-19 6:26:40 PM

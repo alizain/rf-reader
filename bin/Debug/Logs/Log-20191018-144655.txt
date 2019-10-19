@@ -1,0 +1,1 @@
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 2:47:34 PM)

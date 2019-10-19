@@ -1,0 +1,4 @@
+ID : 1530054 has been scanned on Port : COM1 at 15-Oct-19 7:40:30 PM
+DevicePort has been changed COM1 to COM2 successfully
+ID : 1505391 has been scanned on Port : COM2 at 15-Oct-19 7:41:06 PM
+DevicePort has been changed COM2 to COM1 successfully

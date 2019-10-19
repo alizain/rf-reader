@@ -1,0 +1,5 @@
+Access to the port 'COM1' is denied.
+Access to the port 'COM2' is denied.
+Access to the port 'COM5' is denied.
+Application close successfully. (18-Oct-19 10:00:52 PM)
+Application close successfully. (18-Oct-19 10:04:09 PM)

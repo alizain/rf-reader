@@ -1,0 +1,3 @@
+DeviceName has been changed checkintb to checkintbasdf successfully
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 1:26:22 PM)
+Live is Started ...! (18-Oct-19 1:29:00 PM)

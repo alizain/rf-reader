@@ -1,0 +1,4 @@
+DeviceName : checkintb, has been added successfully.
+DevicePort : COM2, has been added successfully.
+DeviceName : checkouttb, has been added successfully.
+DevicePort : COM1, has been added successfully.

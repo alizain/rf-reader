@@ -1,0 +1,7 @@
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 2:09:07 PM)
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 2:10:05 PM)
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 2:10:15 PM)
+Please enter User Name & Password. (18-Oct-19 2:44:22 PM)
+Please enter User Name & Password. (18-Oct-19 2:45:15 PM)
+Please enter User Name & Password. (18-Oct-19 2:46:22 PM)
+Application close successfully. (18-Oct-19 2:46:41 PM)

@@ -1,0 +1,1 @@
+Table Name : checkintb with Port COM5, has been deleted successfully.

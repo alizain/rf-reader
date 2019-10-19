@@ -1,0 +1,1 @@
+DevicePort has been changed COM2 to COM1 successfully

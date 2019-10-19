@@ -1,0 +1,2 @@
+DeviceName : testingthird, has been added successfully.
+DevicePort : COM2, has been added successfully.

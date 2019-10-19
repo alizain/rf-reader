@@ -1,0 +1,5 @@
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:35:07 PM
+Table Name : second with Port COM2, has been added successfully.
+
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:35:46 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:36:48 PM

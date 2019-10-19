@@ -1,0 +1,31 @@
+IPAddress : 192.168.0.201, has been added successfully.
+PortNumber : 1521, has been added successfully.
+ServerName : ORCL, has been added successfully.
+DatabaseName : , has been added successfully.
+Username : system, has been added successfully.
+Password : *******, has been added successfully.
+SentryKey : , has been added successfully.
+Table Name : checkintb with Port COM1, has been added successfully.
+
+Table Name : checkouttb with Port COM2, has been added successfully.
+
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:47:50 PM
+ID : 1530054 has been scanned on Port : COM1 at 17-Oct-19 5:47:53 PM
+ID : 1505391 has been scanned on Port : COM2 at 17-Oct-19 5:47:56 PM
+ID : 1505391 has been scanned on Port : COM1 at 17-Oct-19 5:47:57 PM
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:48:00 PM
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:48:48 PM
+ID : 1505391 has been scanned on Port : COM1 at 17-Oct-19 5:48:50 PM
+Live is Started ...! (17-Oct-19 5:49:07 PM)
+1507213 Insert in database successfully & in Port : COM2
+ID : 1507213 has been Scan at 17-Oct-19 5:49:10 PM
+1530054 Insert in database successfully & in Port : COM1
+ID : 1530054 has been Scan at 17-Oct-19 5:49:13 PM
+1505391 Insert in database successfully & in Port : COM2
+ID : 1505391 has been Scan at 17-Oct-19 5:49:45 PM
+1505391 Insert in database successfully & in Port : COM1
+ID : 1505391 has been Scan at 17-Oct-19 5:49:52 PM
+Live is Stopped ...! (17-Oct-19 5:50:08 PM)
+ID : 1507213 has been scanned on Port : COM2 at 17-Oct-19 5:50:10 PM
+ID : 1505391 has been scanned on Port : COM1 at 17-Oct-19 5:50:12 PM
+ID : 1530054 has been scanned on Port : COM2 at 17-Oct-19 5:50:14 PM

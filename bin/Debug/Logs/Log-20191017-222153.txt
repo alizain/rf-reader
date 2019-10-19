@@ -1,0 +1,2 @@
+Table Name : testt with Port COM3, has been deleted successfully.
+Table Name : test with Port COM6, has been deleted successfully.

@@ -1,0 +1,6 @@
+Please Enter Table Name or Device Port. (18-Oct-19 6:45:52 PM)
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 6:46:14 PM)
+Please enter User Name & Password. (18-Oct-19 6:47:09 PM)
+Password is incorrect. Please try again. (18-Oct-19 6:47:36 PM)
+Application close successfully. (18-Oct-19 6:48:22 PM)
+Please enter Password. (18-Oct-19 6:52:37 PM)

@@ -1,0 +1,2 @@
+checkintbasdf is not a valid table name on COM5 Port. (18-Oct-19 6:41:17 PM)
+Please Enter Device Name or Device Port. (18-Oct-19 6:41:59 PM)
