@@ -313,7 +313,7 @@ namespace RfReader_demo
                             dg_Devices.ItemsSource = _devices.DefaultView;
                         }
                         ConnectionString = "Data Source=(DESCRIPTION =" + "(ADDRESS = (PROTOCOL = TCP)(HOST = " + txt_IPAddress.Text + ")(PORT = " + txt_PortNumber.Text + "))" +
-                            "(CONNECT_DATA =" + "(SERVER = DEDICATED)" + "(SERVICE_NAME = ORCL)));" + "User Id=" + txt_Username.Text + ";Password=" + txt_Password.Password + ";";
+                            "(CONNECT_DATA =" + "(SERVER = DEDICATED)" + "(SERVICE_NAME = " + txt_ServerName.Text + ")));" + "User Id=" + txt_Username.Text + ";Password=" + txt_Password.Password + ";";
 
                     }
                 }
