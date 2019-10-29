@@ -9,7 +9,6 @@ namespace RfReader_demo.Helper
     {
         public DataSet dsXML = new DataSet();
         public DataSet dsNew = new DataSet();
-        public DataSet dsForDevices = new DataSet();
         public DataTable dtChanges = new DataTable();
 
         public void getDifferentRecords(DataTable dtCurrent, DataTable dtLast)
@@ -120,17 +119,8 @@ namespace RfReader_demo.Helper
                     dtChanges.Columns.Add("NewValue");
                     foreach (DataTable table in dsNew.Tables)
                     {
-                        DataTable SecondDataTable = new DataTable();
-                        DataTable FirstDataTable = table;
-                        var getNewTableName = table.TableName.ToString();
-                        if (getNewTableName == "Devices")
-                        {
-                            SecondDataTable = dsForDevices.Tables[table.TableName];
-                        }
-                        else
-                        {
-                            SecondDataTable = dsXML.Tables[table.TableName];
-                        }
+                        DataTable SecondDataTable = dsXML.Tables[table.TableName];
+                        DataTable FirstDataTable = table;                        
                         FirstDataTable.TableName = "test-" + table;
                         getDifferentRecords(FirstDataTable, SecondDataTable);
                     }
