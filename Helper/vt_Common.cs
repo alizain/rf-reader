@@ -1,10 +1,7 @@
-﻿using Sentry;
+using Sentry;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RfReader_demo.Helper
 {
@@ -14,7 +11,7 @@ namespace RfReader_demo.Helper
         public DataSet dsNew = new DataSet();
         public DataSet dsForDevices = new DataSet();
         public DataTable dtChanges = new DataTable();
-    
+
         public void getDifferentRecords(DataTable dtCurrent, DataTable dtLast)
         {
             try
@@ -28,18 +25,10 @@ namespace RfReader_demo.Helper
                     foreach (DataRow dr in dtCurrent.Rows)
                     {
                         foreach (DataColumn Column in dtCurrent.Columns)
-                        {                                                       
+                        {
                             if (dr[Column.ColumnName].ToString() != dtLast.Rows[Index][Column.ColumnName].ToString())
                             {
-                                var columnName = dr[Column.ColumnName].ToString();
-                                var lastColumnName = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                var columnName2 = Column.ColumnName;
-
-                                DataRow ddr = dtChanges.NewRow();
-                                ddr["FieldName"] = Column.ColumnName;
-                                ddr["OldValue"] = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                ddr["NewValue"] = dr[Column.ColumnName].ToString();
-                                dtChanges.Rows.Add(ddr);
+                                AddNewCreatedRow(Column.ColumnName, dtLast.Rows[Index][Column.ColumnName].ToString(), dr[Column.ColumnName].ToString());
                             }
                         }
                         Index++;
@@ -55,180 +44,71 @@ namespace RfReader_demo.Helper
                             if (dtLast == null)
                             {
                                 dtLast = new DataTable();
-
                                 for (int i = 0; i < dtCurrent.Columns.Count; i++)
                                 {
-                                    string colname2 = Column.ColumnName[i].ToString();
                                     string colname = dtCurrent.Columns[i].ColumnName.ToString();
                                     dtLast.Columns.Add(colname, typeof(System.String));
-
-                                    DataRow datarow = dtLast.NewRow();
-                                    dtLast.Rows.Add(datarow);
                                 }
-
-                                if (dtCurrent.Rows.Count != dtLast.Rows.Count)
+                                if (dtCurrent.Rows.Count > 0)
                                 {
-                                    if (dtCurrent.Rows.Count > dtLast.Rows.Count)
+                                    for (int i = 0; i < dtCurrent.Rows.Count; i++)
                                     {
-                                        for (int i = 0; ; i++)
-                                        {
-                                            DataRow datarow = dtLast.NewRow();
-                                            dtLast.Rows.Add(datarow);
-                                            if (dtCurrent.Rows.Count == dtLast.Rows.Count) { break; }
-                                        }
-                                    }
-                                    if (dtCurrent.Rows.Count < dtLast.Rows.Count)
-                                    {
-                                        for (int i = dtLast.Rows.Count; ; i--)
-                                        {
-                                            DataRowCollection datarow = dtLast.Rows;
-                                            datarow[i - 1].Delete();
-                                            if (dtCurrent.Rows.Count == dtLast.Rows.Count) { break; }
-                                        }
+                                        DataRow datarow = dtLast.NewRow();
+                                        dtLast.Rows.Add(datarow);
                                     }
                                 }
+                                dtLast.AcceptChanges();
                             }
-
                             if (dtCurrent.TableName == "test-Devices")
                             {
-                                
-                                    var dtCurrent_ColumnValue = dr[Column.ColumnName].ToString();
-                                    var dtLast_ColumnValue = "";
-                                    try
+                                var dtCurrent_ColumnValue = dr[Column.ColumnName].ToString();
+                                var dtLast_ColumnValue = string.Empty;
+                                try
+                                {
+                                    dtLast_ColumnValue = dtLast.Rows[Index][Column.ColumnName].ToString();
+                                    if (dtCurrent_ColumnValue != dtLast_ColumnValue)
                                     {
-                                        dtLast_ColumnValue = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                        if (dtCurrent_ColumnValue != dtLast_ColumnValue)
-                                        {
-                                            DataRow ddr = dtChanges.NewRow();
-                                            ddr["FieldName"] = Column.ColumnName;
-                                            ddr["OldValue"] = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                            ddr["NewValue"] = dr[Column.ColumnName].ToString();
-                                            dtChanges.Rows.Add(ddr);
-                                        }
+                                        AddNewCreatedRow(Column.ColumnName, dtLast.Rows[Index][Column.ColumnName].ToString(), dr[Column.ColumnName].ToString());
                                     }
-                                    catch (Exception ex)
-                                    {
-                                        if (ex.Message.Contains("There is no row at position"))
-                                        {
-                                            DataRow ddr = dtChanges.NewRow();
-                                            ddr["FieldName"] = Column.ColumnName;
-                                            ddr["OldValue"] = "";
-                                            ddr["NewValue"] = dr[Column.ColumnName].ToString();
-                                            dtChanges.Rows.Add(ddr);
-                                        }
-                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    AddNewCreatedRow(Column.ColumnName, string.Empty, dr[Column.ColumnName].ToString());
+                                }
                             }
                             else
                             {
                                 if (dr[Column.ColumnName].ToString() != dtLast.Rows[Index][Column.ColumnName].ToString())
                                 {
-                                    var columnName = dr[Column.ColumnName].ToString();
-                                    var lastColumnName = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                    var columnName2 = Column.ColumnName;
-
-                                    DataRow ddr = dtChanges.NewRow();
-                                    ddr["FieldName"] = Column.ColumnName;
-                                    ddr["OldValue"] = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                    ddr["NewValue"] = dr[Column.ColumnName].ToString();
-                                    dtChanges.Rows.Add(ddr);
+                                    AddNewCreatedRow(Column.ColumnName, dtLast.Rows[Index][Column.ColumnName].ToString(), dr[Column.ColumnName].ToString());
                                 }
                             }
                         }
                         Index++;
                     }
-                }
-                if (dtLast.Rows.Count > dtCurrent.Rows.Count)
-                {
-                    int Index = 0;
-                    foreach (DataRow dr in dtLast.Rows)
-                    {
-                        foreach (DataColumn Column in dtLast.Columns)
-                        {
-                            if (dtLast == null)
-                            {
-                                dtLast = new DataTable();
-
-                                for (int i = 0; i < dtCurrent.Columns.Count; i++)
-                                {
-                                    string colname2 = Column.ColumnName[i].ToString();
-                                    string colname = dtCurrent.Columns[i].ColumnName.ToString();
-                                    dtLast.Columns.Add(colname, typeof(System.String));
-
-                                    DataRow datarow = dtLast.NewRow();
-                                    dtLast.Rows.Add(datarow);
-                                }
-
-                                if (dtCurrent.Rows.Count != dtLast.Rows.Count)
-                                {
-                                    if (dtCurrent.Rows.Count > dtLast.Rows.Count)
-                                    {
-                                        for (int i = 0; ; i++)
-                                        {
-                                            DataRow datarow = dtLast.NewRow();
-                                            dtLast.Rows.Add(datarow);
-                                            if (dtCurrent.Rows.Count == dtLast.Rows.Count) { break; }
-                                        }
-                                    }
-                                }
-                            }
-
-                            if (dtCurrent.TableName == "test-Devices")
-                            {
-                                    var dtLast_ColumnValue = dr[Column.ColumnName].ToString();
-                                    var dtCurrent_ColumnValue = "";
-                                    
-                                    try
-                                    {
-                                        
-                                        dtCurrent_ColumnValue = dtCurrent.Rows[Index][Column.ColumnName].ToString(); //dr[Column.ColumnName].ToString();
-                                        if (dtLast_ColumnValue != dtCurrent_ColumnValue)
-                                        {
-                                            DataRow ddr = dtChanges.NewRow();
-                                            ddr["FieldName"] = Column.ColumnName;
-                                            ddr["OldValue"] = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                            ddr["NewValue"] = dr[Column.ColumnName].ToString();
-                                            dtChanges.Rows.Add(ddr);
-                                        }
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        if (ex.Message.Contains("There is no row at position"))
-                                        {
-                                            DataRow ddr = dtChanges.NewRow();
-                                            ddr["FieldName"] = Column.ColumnName;
-                                            ddr["OldValue"] = "";
-                                            ddr["NewValue"] = dr[Column.ColumnName].ToString();
-                                            dtChanges.Rows.Add(ddr);
-                                        }
-                                    }
-                            }
-                            else
-                            {
-                                if (dr[Column.ColumnName].ToString() != dtLast.Rows[Index][Column.ColumnName].ToString())
-                                {
-                                    var columnName = dr[Column.ColumnName].ToString();
-                                    var lastColumnName = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                    var columnName2 = Column.ColumnName;
-
-                                    DataRow ddr = dtChanges.NewRow();
-                                    ddr["FieldName"] = Column.ColumnName;
-                                    ddr["OldValue"] = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                    ddr["NewValue"] = dr[Column.ColumnName].ToString();
-                                    dtChanges.Rows.Add(ddr);
-                                }
-                            }
-                        }
-                        Index++;
-                    }
-                }
+                }                
             }
             catch (Exception ex)
             {
-                SentrySdk.CaptureMessage(ex.Message);
-                throw ex;                
+                throw ex;
             }
         }
-        public DataTable CompareData()
+        public void AddNewCreatedRow(string FieldName, string OldValue, string NewValue)
+        {
+            try
+            {
+                DataRow ddr = dtChanges.NewRow();
+                ddr["FieldName"] = FieldName;
+                ddr["OldValue"] = OldValue.ToString();
+                ddr["NewValue"] = NewValue.ToString();
+                dtChanges.Rows.Add(ddr);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void CompareData()
         {
             try
             {
@@ -255,27 +135,17 @@ namespace RfReader_demo.Helper
                         getDifferentRecords(FirstDataTable, SecondDataTable);
                     }
                 }
-                for (int i = 0; i < 3; i++)
-                {
-                    DataTable table2 = dsNew.Tables[0];
-                    if (dsNew.Tables.CanRemove(table2))
-                    {
-                        dsNew.Tables.Remove(table2);
-                    }
-                }
+                dsNew = new DataSet();
             }
             catch (Exception ex)
-            {
-                SentrySdk.CaptureMessage(ex.Message);
+            {                
+                throw ex;
             }
-            return dtChanges;
         }
     }
-
     public class Devices
     {
         public string DeviceName { get; set; }
         public string DevicePort { get; set; }
-
     }
 }
