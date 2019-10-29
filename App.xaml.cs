@@ -1,4 +1,4 @@
-﻿using Nancy.TinyIoc;
+using Nancy.TinyIoc;
 using Sentry;
 using System;
 using System.Collections.Generic;
@@ -12,32 +12,18 @@ using System.Windows;
 
 namespace RfReader_demo
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
-    {
-        private const int MINIMUM_SPLASH_TIME = 1000;
-        public string conn = ConfigurationManager.ConnectionStrings["DSN"].ConnectionString;
+    {        
         protected override void OnStartup(StartupEventArgs e)
         {
-            using (SentrySdk.Init(conn))
+            SplashScreen splashScreen = new SplashScreen("logo-bar-rupali-edit.jpg");
+            splashScreen.Show(true);            
+            string dsnKey = ConfigurationManager.ConnectionStrings["DSN"].ConnectionString;
+            if (!string.IsNullOrEmpty(dsnKey))
             {
-                SplashScreen splash = new SplashScreen();
-                splash.Show();                
-                Stopwatch timer = new Stopwatch();
-                timer.Start();
-                
-                base.OnStartup(e);                
-                Login main = new Login();
-                timer.Stop();
-
-                int remainingTimeToShowSplash = MINIMUM_SPLASH_TIME - (int)timer.ElapsedMilliseconds;
-                if (remainingTimeToShowSplash > 0)
-                    Thread.Sleep(remainingTimeToShowSplash);
-
-                splash.Close();
+                SentrySdk.Init(dsnKey);
             }
+            else { MessageBox.Show("Sentry Key not Found", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning); }
         }
     }
 }
