@@ -25,7 +25,7 @@ namespace RfReader_demo
         #region _Variables
         public static string ConnectionString;
         private bool IsLive = false;
-        public DataTable allPortData;
+        private DataTable allPortData = new DataTable();
         private string EditValue;
         SerialPort[] sps = null;
         _BAL Blayer = new _BAL();
@@ -41,8 +41,8 @@ namespace RfReader_demo
                 SentrySdk.Init(conn);
             }
             else { MessageBox.Show("Sentry Key not Found", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning); }
-            InitializeComponent();            
-            readXML(true);
+            InitializeComponent();
+            readXML();
             BindComboBoxWithAvailablePorts();
             InitializeAllPortsToSerialPorts(true);            
         }
@@ -110,7 +110,7 @@ namespace RfReader_demo
                 }
             }
             catch (Exception ex)
-            {
+            {                
                 txtLogs.Document.Blocks.Add(new Paragraph(new Run(ex.Message.ToString())));
                 InsertingLogTextToLogFile(ex.Message.ToString());
                 SentrySdk.CaptureException(ex);
@@ -173,30 +173,20 @@ namespace RfReader_demo
         #endregion
 
         #region XML FUNCTIONS (READ, COMPARE, SAVE)              
-        void readXML(bool starting)
+        void readXML()
         {
             string fileName = AppDomain.CurrentDomain.BaseDirectory + "\\Credential\\appData.xml";
             try
             {
                 if (File.Exists(fileName))
                 {
-                    if (starting)
-                    {
-                        vtCommon.dsXML.ReadXml(fileName);
-                        vtCommon.dsForDevices.ReadXml(fileName);
-                    }
-                    else
-                    {
-                        vtCommon.dsXML = new DataSet();
-                        vtCommon.dsXML.ReadXml(fileName);
-                        vtCommon.dsForDevices = new DataSet();
-                        vtCommon.dsForDevices.ReadXml(fileName);
-                    }
+                    vtCommon.dsXML = new DataSet();
+                    vtCommon.dsXML.ReadXml(fileName);                    
                     if (vtCommon.dsXML != null && vtCommon.dsXML.Tables.Count > 0 && vtCommon.dsXML.Tables[0].Rows.Count > 0)
                     {
                         var _db = vtCommon.dsXML.Tables["DatabaseConfig"];
-                        var _devices = allPortData = vtCommon.dsXML.Tables["Devices"];                        
-
+                        var _devices = allPortData = vtCommon.dsXML.Tables["Devices"].Copy();
+                        
                         if (_db != null)
                         {
                             txt_IPAddress.Text = string.IsNullOrEmpty(_db.Rows[0][0].ToString()) ? string.Empty : Crypto.Decrypt(_db.Rows[0][0].ToString());
@@ -457,33 +447,40 @@ namespace RfReader_demo
 
         #region GRID BUTTONS (ADD NEW RECORD, EDIT, DELETE, CANCELEDIT) (CLICK EVENTS)       
         private void btn_AddNewRow_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             try
             {
-                string getPort_FromComboBox = comboBox.SelectedItem == null ? String.Empty : comboBox.SelectedItem.ToString(); // <-- Exception            
-                if (txt_DeviceName.Text.Length < 1 || getPort_FromComboBox.Length < 1)
+                if (IsLive)
                 {
-                    string msg = "Please Enter Table Name or Device Port.";
-                    MessageBox.Show(msg, "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Changes not allowed while application \"Is Live\".", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
                 else
                 {
-                    var getButtonText = btn_AddNewRow.Content.ToString();
-                    if (getButtonText == "Update")
+                    string getPort_FromComboBox = comboBox.SelectedItem == null ? String.Empty : comboBox.SelectedItem.ToString(); // <-- Exception            
+                    if (txt_DeviceName.Text.Length < 1 || getPort_FromComboBox.Length < 1)
                     {
-                        DataRow SelectRow = allPortData.Select("DevicePort='" + EditValue + "'").FirstOrDefault();
-                        SelectRow["DeviceName"] = txt_DeviceName.Text;
-                        SelectRow["DevicePort"] = comboBox.SelectedItem.ToString();
-                        allPortData.AcceptChanges();
-                        BindGridData(true);                        
-                        btn_AddNewRow.Content = "Add";
+                        string msg = "Please Enter Table Name or Device Port.";
+                        MessageBox.Show(msg, "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                     else
                     {
-                        BindGridData(false);
+                        var getButtonText = btn_AddNewRow.Content.ToString();
+                        if (getButtonText == "Update")
+                        {
+                            DataRow SelectRow = allPortData.Select("DevicePort='" + EditValue + "'").FirstOrDefault();
+                            SelectRow["DeviceName"] = txt_DeviceName.Text;
+                            SelectRow["DevicePort"] = comboBox.SelectedItem.ToString();
+                            allPortData.AcceptChanges();
+                            BindGridData(true);
+                            btn_AddNewRow.Content = "Add";
+                        }
+                        else
+                        {
+                            BindGridData(false);
+                        }
                     }
+                    BindComboBoxWithAvailablePorts();
                 }
-                BindComboBoxWithAvailablePorts();
             }
             catch (Exception ex)
             {
@@ -527,24 +524,28 @@ namespace RfReader_demo
         {
             try
             {
-                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure to Delete?", "Delete", System.Windows.MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBoxResult messageBoxResult = MessageBox.Show("Are you sure to Delete?", "Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
-                    var selectedItem = dg_Devices.SelectedItem;
-                    if (selectedItem != null)
+                    if(allPortData.AsEnumerable().ToList().Count == 1)
                     {
-                        var getPort = ((DataRowView)selectedItem).Row.ItemArray[1].ToString();
-                        DeleteDeviceFromXML(Helper.Crypto.Encrypt(getPort));
-                        DataRow DeleteRow = allPortData.Select("DevicePort='" + getPort + "'").FirstOrDefault();
-                        string ColumnName = DeleteRow[0].ToString();
-                        allPortData.Rows.Remove(DeleteRow);
-                        allPortData.AcceptChanges();
-                        dg_Devices.ItemsSource = null;
-                        dg_Devices.ItemsSource = allPortData.DefaultView;
-                        string text = "Table Name : " + ColumnName + " with Port " + getPort + ", has been deleted successfully.";
-                        UpdateScreen(text, true, null, null);
-                        readXML(false);
-                        InitializeAllPortsToSerialPorts(false);
+                        MessageBox.Show("You are not allowed to delete last Device Configuration.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    else
+                    {
+                        var selectedItem = dg_Devices.SelectedItem;
+                        if (selectedItem != null)
+                        {
+                            var getPort = ((DataRowView)selectedItem).Row.ItemArray[1].ToString();                            
+                            DataRow DeleteRow = allPortData.Select("DevicePort='" + getPort + "'").FirstOrDefault();
+                            string ColumnName = DeleteRow[0].ToString();
+                            allPortData.Rows.Remove(DeleteRow);
+                            allPortData.AcceptChanges();
+                            dg_Devices.ItemsSource = null;
+                            dg_Devices.ItemsSource = allPortData.DefaultView;
+                            string text = "Table Name : " + ColumnName + " with Port " + getPort + ", has been deleted successfully.";
+                            UpdateScreen(text, true, null, null);
+                        }
                     }
                 }
             }
@@ -576,29 +577,7 @@ namespace RfReader_demo
 
         #endregion
 
-        #region GRID FUNCTIONS (BINDGRIDDATA, DELETEDEVICEFROMXML)
-        private void DeleteDeviceFromXML(string Port)
-        {
-            try
-            {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(AppDomain.CurrentDomain.BaseDirectory + "\\Credential\\appData.xml");
-                XmlNodeList _DeviceList = doc.GetElementsByTagName("Devices");
-                foreach (XmlNode item in _DeviceList)
-                {
-                    if (item.LastChild.InnerXml == Port)
-                    {
-                        item.ParentNode.RemoveChild(item);
-                        break;
-                    }
-                }
-                doc.Save(AppDomain.CurrentDomain.BaseDirectory + "\\Credential\\appData.xml");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        #region GRID FUNCTIONS (BINDGRIDDATA)       
         public void BindGridData(bool isUpdate)
         {
             try
@@ -606,7 +585,7 @@ namespace RfReader_demo
                 DataRow datarow;
                 if (!isUpdate)
                 {
-                    if (allPortData == null)
+                    if (allPortData == null || allPortData.Columns.Count == 0)
                     {
                         allPortData = new DataTable();
                         allPortData.Columns.Add("DeviceName", typeof(System.String));
@@ -657,13 +636,13 @@ namespace RfReader_demo
                             var password = Crypto.Encrypt(txt_Password.Password);
                             string Respone = JsonConvert.SerializeObject(allPortData, jss);
                             List<Devices> deviceData = JsonConvert.DeserializeObject<List<Devices>>(Respone);
-                            if (deviceData != null)
+                            if (deviceData != null && deviceData.Count > 0)
                             {
                                 SaveXML(ipAddress, portNumber, serviceName, databaseName, username, password, deviceData);
                                 CompareXML();
                                 vtCommon.CompareData();
                                 ShowChanges();
-                                readXML(false);
+                                readXML();
                                 InitializeAllPortsToSerialPorts(false);
                             }
                             else
@@ -758,9 +737,16 @@ namespace RfReader_demo
             }
         }
         public void UpdateScreen(string Data, bool ConfigChange, string tableName, string portName)
-        {            
+        {
             var InsertionInTblStatus = string.Empty;
             string textMessage = string.Empty;
+            string text = string.Empty;
+            if (ConfigChange) {
+                text = Data;
+            }
+            else {
+                text = "ID : " + Data + " has been scanned on Port : " + portName + " (" + DateTime.Now + ")";
+            }
             if (IsLive == true && ConfigChange == false)
             {
                 try
@@ -770,7 +756,7 @@ namespace RfReader_demo
                     tblData.TableName = tableName;
                     tblData.CheckTime = DateTime.Now;
 
-                    string text = "ID : " + Data + " has been scanned on Port : " + portName + " (" + DateTime.Now + ")";
+                    text = "ID : " + Data + " has been scanned on Port : " + portName + " (" + DateTime.Now + ")";
                     txtLogs.Document.Blocks.Add(new Paragraph(new Run(text)));
                     InsertingLogTextToLogFile(text);
 
@@ -781,8 +767,10 @@ namespace RfReader_demo
                     }
                     else
                     {
-                        textMessage = Data + " Insertion in database failed & with Port : " + portName + " (" + DateTime.Now + ") \n Error: " + InsertionInTblStatus.Trim().ToString() + "";
+                        textMessage = Data + " Insertion in database failed & with Port : " + portName + " (" + DateTime.Now + ") \nError: " + InsertionInTblStatus.Trim().ToString() + "";
                     }
+                    txtLogs.Document.Blocks.Add(new Paragraph(new Run(textMessage)));
+                    InsertingLogTextToLogFile(textMessage);
                 }
                 catch (Exception ex)
                 {
@@ -792,51 +780,23 @@ namespace RfReader_demo
                 }
             }
 
-            if (ConfigChange)
+            try
             {
-                try
+                if (string.IsNullOrEmpty(InsertionInTblStatus))
                 {
-                    if (Data.Length > 0)
+                    if (text.Length > 0)
                     {
-                        txtLogs.Document.Blocks.Add(new Paragraph(new Run(Data)));
-                        InsertingLogTextToLogFile(Data);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    txtLogs.Document.Blocks.Add(new Paragraph(new Run(ex.Message.ToString())));
-                    InsertingLogTextToLogFile(ex.Message.ToString());
-                    SentrySdk.CaptureException(ex);
-                }
-            }
-            else
-            {
-                try
-                {
-                    if (InsertionInTblStatus == "Data Inserted Successfully" && IsLive == true)
-                    {
-                        txtLogs.Document.Blocks.Add(new Paragraph(new Run(textMessage)));
-                        InsertingLogTextToLogFile(textMessage);
-                    }
-                    else if (InsertionInTblStatus != "Data Inserted Successfully" && IsLive == true)
-                    {
-                        txtLogs.Document.Blocks.Add(new Paragraph(new Run(textMessage)));
-                        InsertingLogTextToLogFile(textMessage);
-                    }
-                    else
-                    {
-                        string text = "ID : " + Data + " has been scanned on Port : " + portName + " (" + DateTime.Now + ")";
                         txtLogs.Document.Blocks.Add(new Paragraph(new Run(text)));
                         InsertingLogTextToLogFile(text);
                     }
                 }
-                catch (Exception ex)
-                {
-                    txtLogs.Document.Blocks.Add(new Paragraph(new Run(ex.Message.ToString())));
-                    InsertingLogTextToLogFile(ex.Message.ToString());
-                    SentrySdk.CaptureException(ex);
-                }
             }
+            catch (Exception ex)
+            {
+                txtLogs.Document.Blocks.Add(new Paragraph(new Run(ex.Message.ToString())));
+                InsertingLogTextToLogFile(ex.Message.ToString());
+                SentrySdk.CaptureException(ex);
+            }           
         }
         private bool ConnectionTest(bool fromWhere)
         {
@@ -867,8 +827,8 @@ namespace RfReader_demo
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);                            
-                            txtLogs.Document.Blocks.Add(new Paragraph(new Run("\nError : " + ex.Message.ToString().TrimEnd('\r', '\n'))));
-                            InsertingLogTextToLogFile("\nError : " + ex.Message.ToString().TrimEnd('\r', '\n'));
+                            txtLogs.Document.Blocks.Add(new Paragraph(new Run("Error : " + ex.Message.ToString().TrimEnd('\r', '\n'))));
+                            InsertingLogTextToLogFile("Error : " + ex.Message.ToString().TrimEnd('\r', '\n'));
                             SentrySdk.CaptureException(ex);
                             connected = false;
                             break;
@@ -911,8 +871,7 @@ namespace RfReader_demo
         public void ShowChanges()
         {
             if (vtCommon.dtChanges != null && vtCommon.dtChanges.Rows.Count > 0)
-            {
-                var deviceName = string.Empty;
+            {                
                 foreach (DataRow dr in vtCommon.dtChanges.Rows)
                 {
                     try
@@ -967,5 +926,11 @@ namespace RfReader_demo
             }
         }
         #endregion
+        
+        private void btn_Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            readXML();            
+            InitializeAllPortsToSerialPorts(false);
+        }
     }
 }
