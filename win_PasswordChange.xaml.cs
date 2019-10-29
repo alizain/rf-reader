@@ -6,6 +6,7 @@ using System.Data;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Threading;
 using System.Xml;
 
 namespace RfReader_demo
@@ -55,6 +56,7 @@ namespace RfReader_demo
                             if (PasswordChanged(newPassword))
                             {
                                 string msg = "Password changed successfully.";
+                                MessageBox.Show("Password changed successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                                 lbl_StatusMessage.Content = msg;
                                 lbl_StatusMessage.Visibility = Visibility.Visible;
                                 lbl_StatusMessage.Background = new SolidColorBrush(Colors.LightGreen);
@@ -68,6 +70,7 @@ namespace RfReader_demo
                         }
                         else
                         {
+                            MessageBox.Show("New Password and Confirm Password is not same.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                             string msg = "New Password and Confirm Password is not same.";
                             lbl_StatusMessage.Content = msg;
                             lbl_StatusMessage.Visibility = Visibility.Visible;
@@ -80,6 +83,7 @@ namespace RfReader_demo
                 SentrySdk.CaptureException(ex);
             }
         }
+        
         private void btn_Cancel_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -120,6 +124,9 @@ namespace RfReader_demo
                     else
                     {
                         MessageBox.Show("Old Password not matched.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        string msg = "Old Password not matched.";
+                        lbl_StatusMessage.Content = msg;
+                        lbl_StatusMessage.Visibility = Visibility.Visible;
                     }
                 }
             }
