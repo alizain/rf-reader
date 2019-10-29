@@ -1,216 +1,155 @@
-﻿using Sentry;
+using Sentry;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Xml;
 
 namespace RfReader_demo
 {
-    /// <summary>
-    /// Interaction logic for win_PasswordChange.xaml
-    /// </summary>
     public partial class win_PasswordChange : Window
     {
-        public static string conn = ConfigurationManager.ConnectionStrings["DSN"].ConnectionString;
         public win_PasswordChange()
-        {
-            using (SentrySdk.Init(conn))
+        {            
+            try
             {
-                try
+                string conn = ConfigurationManager.ConnectionStrings["DSN"].ConnectionString;
+                if (!string.IsNullOrEmpty(conn))
                 {
-                    InitializeComponent();
-                    lbl_StatusMessage.Visibility = Visibility.Hidden;
+                    SentrySdk.Init(conn);
                 }
-                catch (Exception ex)
-                {
-                    SentrySdk.CaptureException(ex);
-                }
+                else { MessageBox.Show("Sentry Key not Found", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning); }
+                InitializeComponent();
+                lbl_StatusMessage.Visibility = Visibility.Hidden;
+            }
+            catch (Exception ex)
+            {
+                SentrySdk.CaptureException(ex);
             }
         }
-      
         private void btn_Save_Click(object sender, RoutedEventArgs e)
         {
-            using (SentrySdk.Init(conn))
+            try
             {
-                try
-                {
-                    lbl_StatusMessage.Content = "";
-                    lbl_StatusMessage.Visibility = Visibility.Hidden;
-                    var oldPassword = txtbx_OldPassword.Password;
-                    var newPassword = txtbx_NewPassword.Password;
-                    var confirmPassword = txtbx_ConfirmPassword.Password;
+                lbl_StatusMessage.Content = string.Empty;
+                lbl_StatusMessage.Visibility = Visibility.Hidden;
+                var oldPassword = txtbx_OldPassword.Password;
+                var newPassword = txtbx_NewPassword.Password;
+                var confirmPassword = txtbx_ConfirmPassword.Password;
 
-                    if (oldPassword.Length < 1 || newPassword.Length < 1 || confirmPassword.Length < 1)
+                if (oldPassword.Length < 1 || newPassword.Length < 1 || confirmPassword.Length < 1)
+                {
+                    string msg = "Please fill out the fields.";
+                    lbl_StatusMessage.Content = msg;
+                    lbl_StatusMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    if (CheckOldPassword(oldPassword))
                     {
-                        lbl_StatusMessage.Content = "Please fill out the fields.";
-                        lbl_StatusMessage.Visibility = Visibility.Visible;
-                    }
-                    else
-                    {
-                        var Status_OldPassword = CheckOldPassword(oldPassword);
-                        if (Status_OldPassword == true)
+                        if (newPassword == confirmPassword)
                         {
-                            if (newPassword == confirmPassword)
+                            if (PasswordChanged(newPassword))
                             {
-                                var Status_PasswordChanged = PasswordChanged(newPassword);
-                                if (Status_PasswordChanged == true)
-                                {
-                                    lbl_StatusMessage.Content = "Password changed successfully.";
-                                    lbl_StatusMessage.Visibility = Visibility.Visible;
-                                    lbl_StatusMessage.Background = new SolidColorBrush(Colors.LightGreen);
-                                    lbl_StatusMessage.Foreground = new SolidColorBrush(Colors.Green);
-                                    lbl_StatusMessage.BorderBrush = new SolidColorBrush(Colors.Green);
-                                    lbl_StatusMessage.BorderThickness = new Thickness(2.0);
-                                    MessageBox.Show("Password changed successfully", "Password Changed", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                                    this.Close();
-                                }
-                                else
-                                {
-                                    lbl_StatusMessage.Content = "Some error occured on password changing. Please try again.";
-                                    lbl_StatusMessage.Visibility = Visibility.Visible;
-                                }
-                            }
-                            else
-                            {
-                                lbl_StatusMessage.Content = "New Password and Confirm Password is not same.";
+                                string msg = "Password changed successfully.";
+                                lbl_StatusMessage.Content = msg;
                                 lbl_StatusMessage.Visibility = Visibility.Visible;
+                                lbl_StatusMessage.Background = new SolidColorBrush(Colors.LightGreen);
+                                lbl_StatusMessage.Foreground = new SolidColorBrush(Colors.Green);
+                                lbl_StatusMessage.BorderBrush = new SolidColorBrush(Colors.Green);
+                                lbl_StatusMessage.BorderThickness = new Thickness(2.0);
+                                MainWindow.InsertingLogTextToLogFile(msg + " (" + DateTime.Now.ToString() + ")");
+                                SentrySdk.CaptureMessage(msg);
+                                this.Close();
                             }
                         }
                         else
                         {
-                            lbl_StatusMessage.Content = "You entered wrong old password.";
+                            string msg = "New Password and Confirm Password is not same.";
+                            lbl_StatusMessage.Content = msg;
                             lbl_StatusMessage.Visibility = Visibility.Visible;
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    SentrySdk.CaptureException(ex);
-                }
+            }
+            catch (Exception ex)
+            {
+                SentrySdk.CaptureException(ex);
             }
         }
-
         private void btn_Cancel_Click(object sender, RoutedEventArgs e)
         {
-            using (SentrySdk.Init(conn))
+            try
             {
-                try
-                {
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    SentrySdk.CaptureException(ex);
-                }
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                SentrySdk.CaptureException(ex);
             }
         }
         private void btn_Quit_Click(object sender, RoutedEventArgs e)
         {
-            using (SentrySdk.Init(conn))
+            try
             {
-                try
-                {
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    SentrySdk.CaptureException(ex);
-                }
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                SentrySdk.CaptureException(ex);
             }
         }
         private bool CheckOldPassword(string pass)
         {
-            using (SentrySdk.Init(conn))
+            bool ValidPassword = false;
+            try
             {
-                //string path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
-                //string fileName = System.IO.Path.Combine(path, "LoginCredential.xml");
                 string fileName = AppDomain.CurrentDomain.BaseDirectory + "\\Credential\\LoginCredential.xml";
-
-                try
+                DataSet ds = new DataSet();
+                ds.ReadXml(fileName);
+                var dt = ds.Tables["LoginCredential"];
+                if (dt != null)
                 {
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(fileName);
-
-                    var dt = ds.Tables["LoginCredential"];
-                    if (dt != null)
+                    if (pass == Helper.Crypto.Decrypt(dt.Rows[0][1].ToString()))
                     {
-                        var getUserName_XML = dt.Rows[0][0].ToString();
-                        var getPass_XML = dt.Rows[0][1].ToString();
-                        var getUserName_Decrypt = Helper.Crypto.Decrypt(getUserName_XML);
-                        var getPass_Decrypt = Helper.Crypto.Decrypt(getPass_XML);
-
-                        if (pass == getPass_Decrypt)
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
+                        ValidPassword = true;
                     }
-                    return false;
-                }
-                catch (Exception ex)
-                {
-                    SentrySdk.CaptureException(ex);
-                    return false;
+                    else
+                    {
+                        MessageBox.Show("Old Password not matched.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MainWindow.InsertingLogTextToLogFile(ex.Message + " (" + DateTime.Now.ToString() + ")");
+                SentrySdk.CaptureException(ex);
+                MessageBox.Show(ex.Message);
+            }
+            return ValidPassword;
         }
-
         private bool PasswordChanged(string newPassword)
         {
-            using (SentrySdk.Init(conn))
+            bool _Changed = true;
+            try
             {
-                try
-                {
-                    var username = "admin";
-                    var password = newPassword;
-                    //string path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
-                    //string fileName = System.IO.Path.Combine(path, "LoginCredential.xml");
-                    string fileName = AppDomain.CurrentDomain.BaseDirectory + "\\Credential\\LoginCredential.xml";
-
-                    if (File.Exists(fileName))
-                    {
-                        File.Delete(fileName);
-                    }
-                    XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
-                    xmlWriterSettings.Indent = true;
-                    xmlWriterSettings.NewLineOnAttributes = true;
-                    using (XmlWriter xmlWriter = XmlWriter.Create(fileName, xmlWriterSettings))
-                    {
-                        xmlWriter.WriteStartDocument();
-                        /*LoginCredential Config*/
-                        xmlWriter.WriteStartElement("LoginCredential");
-                        xmlWriter.WriteElementString("UserName", Helper.Crypto.Encrypt(username));
-                        xmlWriter.WriteElementString("Password", Helper.Crypto.Encrypt(password));
-                        xmlWriter.WriteEndElement();
-
-                        xmlWriter.WriteEndDocument();
-                        xmlWriter.Flush();
-                        xmlWriter.Close();
-                    }
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    SentrySdk.CaptureException(ex);
-                    return false;
-                }
+                XmlDocument doc = new XmlDocument();
+                doc.Load(AppDomain.CurrentDomain.BaseDirectory + "\\Credential\\LoginCredential.xml");
+                XmlNodeList _Password = doc.GetElementsByTagName("Password");
+                _Password[0].InnerText = Helper.Crypto.Encrypt(newPassword);
+                doc.Save(AppDomain.CurrentDomain.BaseDirectory + "\\Credential\\LoginCredential.xml");
             }
-        }        
+            catch (Exception ex)
+            {
+                MainWindow.InsertingLogTextToLogFile(ex.Message + " (" + DateTime.Now.ToString() + ")");
+                SentrySdk.CaptureException(ex);
+                MessageBox.Show(ex.Message);
+                _Changed = false;
+            }
+            return _Changed;
+        }
     }
 }
