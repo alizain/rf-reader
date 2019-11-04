@@ -2,6 +2,7 @@ using Sentry;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace RfReader_demo.Helper
 {
@@ -35,57 +36,82 @@ namespace RfReader_demo.Helper
                 }
                 if (dtCurrentCount > dtLastCount)
                 {
-                    int Index = 0;
-                    foreach (DataRow dr in dtCurrent.Rows)
+                    if (dtLast == null)
                     {
-                        foreach (DataColumn Column in dtCurrent.Columns)
+                        dtLast = new DataTable();
+                        for (int i = 0; i < dtCurrent.Columns.Count; i++)
                         {
-                            if (dtLast == null)
+                            string colname = dtCurrent.Columns[i].ColumnName.ToString();
+                            dtLast.Columns.Add(colname, typeof(System.String));
+                        }
+                        if (dtCurrent.Rows.Count > 0)
+                        {
+                            for (int i = 0; i < dtCurrent.Rows.Count; i++)
                             {
-                                dtLast = new DataTable();
-                                for (int i = 0; i < dtCurrent.Columns.Count; i++)
-                                {
-                                    string colname = dtCurrent.Columns[i].ColumnName.ToString();
-                                    dtLast.Columns.Add(colname, typeof(System.String));
-                                }
-                                if (dtCurrent.Rows.Count > 0)
-                                {
-                                    for (int i = 0; i < dtCurrent.Rows.Count; i++)
-                                    {
-                                        DataRow datarow = dtLast.NewRow();
-                                        dtLast.Rows.Add(datarow);
-                                    }
-                                }
-                                dtLast.AcceptChanges();
-                            }
-                            if (dtCurrent.TableName == "test-Devices")
-                            {
-                                var dtCurrent_ColumnValue = dr[Column.ColumnName].ToString();
-                                var dtLast_ColumnValue = string.Empty;
-                                try
-                                {
-                                    dtLast_ColumnValue = dtLast.Rows[Index][Column.ColumnName].ToString();
-                                    if (dtCurrent_ColumnValue != dtLast_ColumnValue)
-                                    {
-                                        AddNewCreatedRow(Column.ColumnName, dtLast.Rows[Index][Column.ColumnName].ToString(), dr[Column.ColumnName].ToString());
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    AddNewCreatedRow(Column.ColumnName, string.Empty, dr[Column.ColumnName].ToString());
-                                }
-                            }
-                            else
-                            {
-                                if (dr[Column.ColumnName].ToString() != dtLast.Rows[Index][Column.ColumnName].ToString())
-                                {
-                                    AddNewCreatedRow(Column.ColumnName, dtLast.Rows[Index][Column.ColumnName].ToString(), dr[Column.ColumnName].ToString());
-                                }
+                                DataRow datarow = dtLast.NewRow();
+                                dtLast.Rows.Add(datarow);
                             }
                         }
-                        Index++;
+                        dtLast.AcceptChanges();
                     }
-                }                
+
+                    if (dtCurrent.TableName != "test-Devices")
+                    {
+                        int count = 0;
+                        foreach (DataRow dr in dtCurrent.Rows)
+                        {
+                            foreach (DataColumn Column in dtCurrent.Columns)
+                            {
+                                AddNewCreatedRow(Column.ColumnName, dtCurrent.Rows[count][Column.ColumnName].ToString(), dr[Column.ColumnName].ToString());                            
+                            }
+                            count++;
+                        }
+                    }
+                    else
+                    {
+                        DataTable TableC = new DataTable();
+                        var idsNotInB = dtCurrent.AsEnumerable().Select(r => r.Field<string>("DevicePort"))
+                            .Except(dtLast.AsEnumerable().Select(r => r.Field<string>("DevicePort")));
+                        TableC = (from row in dtCurrent.AsEnumerable()
+                                  join id in idsNotInB
+                                  on row.Field<string>("DevicePort") equals id
+                                  select row).CopyToDataTable();
+
+                        int Index = 0;
+                        foreach (DataRow dr in TableC.Rows)
+                        {
+                            foreach (DataColumn Column in TableC.Columns)
+                            {
+                                var columnName = Column.ColumnName.ToString();
+                                var columnValue = TableC.Rows[Index][Column.ColumnName].ToString();
+                                AddNewCreatedRow(columnName, columnValue, columnValue);
+                            }
+                            Index++;
+                        }
+                    }
+                }
+                if (dtLastCount > dtCurrentCount)
+                {                                        
+                    DataTable TableC_ = new DataTable();
+
+                    var idsNotInB_ = dtLast.AsEnumerable().Select(r => r.Field<string>("DevicePort"))
+                        .Except(dtCurrent.AsEnumerable().Select(r => r.Field<string>("DevicePort")));
+                    TableC_ = (from row in dtLast.AsEnumerable()
+                              join id in idsNotInB_
+                              on row.Field<string>("DevicePort") equals id
+                              select row).CopyToDataTable();
+                    int Index = 0;
+                    foreach (DataRow dr in TableC_.Rows)
+                    {
+                        foreach (DataColumn Column in TableC_.Columns)
+                        {
+                            var columnName = Column.ColumnName.ToString();                             
+                            var columnValue = TableC_.Rows[Index][Column.ColumnName].ToString();
+                            AddNewCreatedRow(columnName, columnValue, columnValue);                           
+                        }
+                        Index++;
+                    }                                        
+                }
             }
             catch (Exception ex)
             {
