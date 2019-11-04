@@ -25,7 +25,7 @@ namespace RfReader_demo
         #region _Variables
         public static string ConnectionString;
         private bool IsLive = false;
-        private DataTable allPortData = new DataTable();
+        private DataTable allPortData = new DataTable();        
         private string EditValue;
         SerialPort[] sps = null;
         _BAL Blayer = new _BAL();
@@ -142,7 +142,7 @@ namespace RfReader_demo
             {                
                 string data = sp.ReadLine();
                 var checkPortName = sp.PortName;
-                var rows = allPortData.AsEnumerable().Where(r => r.Field<string>("DevicePort") == checkPortName).ToList();
+                var rows = DecryptDeviceTable(vtCommon.dsXML.Tables["Devices"]).AsEnumerable().Where(r => r.Field<string>("DevicePort") == checkPortName).ToList();
                 if (rows.Count > 0)
                 {
                     string tablename = rows[0].ItemArray[0].ToString();
@@ -185,8 +185,8 @@ namespace RfReader_demo
                     if (vtCommon.dsXML != null && vtCommon.dsXML.Tables.Count > 0 && vtCommon.dsXML.Tables[0].Rows.Count > 0)
                     {
                         var _db = vtCommon.dsXML.Tables["DatabaseConfig"];
-                        var _devices = allPortData = vtCommon.dsXML.Tables["Devices"].Copy();
-                        
+                        var _devices = allPortData = vtCommon.dsXML.Tables["Devices"].Copy();                        
+
                         if (_db != null)
                         {
                             txt_IPAddress.Text = string.IsNullOrEmpty(_db.Rows[0][0].ToString()) ? string.Empty : Crypto.Decrypt(_db.Rows[0][0].ToString());
@@ -198,17 +198,7 @@ namespace RfReader_demo
                         }
                         if (_devices != null)
                         {
-                            // Decrypt device data conversion
-                            int Index = 0;
-                            foreach (DataRow dr in _devices.Rows)
-                            {
-                                foreach (DataColumn Column in _devices.Columns)
-                                {
-                                    dr[Column.ColumnName] = string.IsNullOrEmpty(dr[Column.ColumnName].ToString()) ? string.Empty : Crypto.Decrypt(dr[Column.ColumnName].ToString());
-                                }
-                                Index++;
-                            }
-                            // end Decrypt device data conversion
+                            _devices = allPortData = DecryptDeviceTable(vtCommon.dsXML.Tables["Devices"]);                                                     
                             dg_Devices.ItemsSource = null;
                             dg_Devices.CanUserAddRows = false;
                             dg_Devices.ItemsSource = _devices.DefaultView;
@@ -249,15 +239,7 @@ namespace RfReader_demo
                     if (_devices != null)
                     {
                         var new_Devicetbl = _devices.Copy();
-                        int Index = 0;
-                        foreach (DataRow dr in new_Devicetbl.Rows)
-                        {
-                            foreach (DataColumn Column in new_Devicetbl.Columns)
-                            {
-                                dr[Column.ColumnName] = Crypto.Decrypt(dr[Column.ColumnName].ToString());
-                            }
-                            Index++;
-                        }
+                        new_Devicetbl = DecryptDeviceTable(vtCommon.dsNew.Tables["Devices"]);                        
                         dg_Devices.ItemsSource = null;                        
                         dg_Devices.CanUserAddRows = false;
                         dg_Devices.ItemsSource = new_Devicetbl.DefaultView;
@@ -351,9 +333,10 @@ namespace RfReader_demo
         private void btnLive_Click(object sender, RoutedEventArgs e)
         {
             var LiveBtn_TextBlockText = txtBlock_BtnLive.Text.ToString();
-            if (ConnectionTest(false))
+
+            if (LiveBtn_TextBlockText == "Go Live")
             {
-                if (LiveBtn_TextBlockText == "Go Live")
+                if (ConnectionTest(false))
                 {
                     IsLive = true;
                     txtBlock_BtnLive.Text = "Go Offline";
@@ -364,21 +347,21 @@ namespace RfReader_demo
                 }
                 else
                 {
-                    IsLive = false;
-                    txtBlock_BtnLive.Text = "Go Live";
-                    btnLive.Background = Brushes.LimeGreen;
-                    string text = "Live is Stopped ...! (" + DateTime.Now + ")";
-                    txtLogs.Document.Blocks.Add(new Paragraph(new Run(text)));
-                    InsertingLogTextToLogFile(text);
+                    string msg = "Database connection failed. Please make valid database configuration then Go Live.";
+                    MessageBox.Show(msg, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    txtLogs.Document.Blocks.Add(new Paragraph(new Run(msg + " (" + DateTime.Now.ToString() + ")")));
+                    InsertingLogTextToLogFile(msg + " (" + DateTime.Now.ToString() + ")");
+                    SentrySdk.CaptureMessage(msg);
                 }
             }
             else
             {
-                string msg = "Database connection failed. Please make valid database configuration then Go Live.";
-                MessageBox.Show(msg, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                txtLogs.Document.Blocks.Add(new Paragraph(new Run(msg + " (" + DateTime.Now.ToString() + ")")));
-                InsertingLogTextToLogFile(msg + " (" + DateTime.Now.ToString() + ")");
-                SentrySdk.CaptureMessage(msg);
+                IsLive = false;
+                txtBlock_BtnLive.Text = "Go Live";
+                btnLive.Background = Brushes.LimeGreen;
+                string text = "Live is Stopped ...! (" + DateTime.Now + ")";
+                txtLogs.Document.Blocks.Add(new Paragraph(new Run(text)));
+                InsertingLogTextToLogFile(text);
             }
         }
         private void btn_TestConnection_Click(object sender, RoutedEventArgs e)
@@ -447,7 +430,7 @@ namespace RfReader_demo
 
         #region GRID BUTTONS (ADD NEW RECORD, EDIT, DELETE, CANCELEDIT) (CLICK EVENTS)       
         private void btn_AddNewRow_Click(object sender, RoutedEventArgs e)
-        {            
+        {
             try
             {
                 if (IsLive)
@@ -524,19 +507,19 @@ namespace RfReader_demo
         {
             try
             {
-                MessageBoxResult messageBoxResult = MessageBox.Show("Are you sure to Delete?", "Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (messageBoxResult == MessageBoxResult.Yes)
+                if (IsLive)
                 {
-                    if(allPortData.AsEnumerable().ToList().Count == 1)
-                    {
-                        MessageBox.Show("You are not allowed to delete last Device Configuration.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                    else
+                    MessageBox.Show("Changes not allowed while application \"Is Live\".", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+                else
+                {
+                    MessageBoxResult messageBoxResult = MessageBox.Show("Are you sure to Delete?", "Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (messageBoxResult == MessageBoxResult.Yes)
                     {
                         var selectedItem = dg_Devices.SelectedItem;
                         if (selectedItem != null)
                         {
-                            var getPort = ((DataRowView)selectedItem).Row.ItemArray[1].ToString();                            
+                            var getPort = ((DataRowView)selectedItem).Row.ItemArray[1].ToString();
                             DataRow DeleteRow = allPortData.Select("DevicePort='" + getPort + "'").FirstOrDefault();
                             string ColumnName = DeleteRow[0].ToString();
                             allPortData.Rows.Remove(DeleteRow);
@@ -545,6 +528,7 @@ namespace RfReader_demo
                             dg_Devices.ItemsSource = allPortData.DefaultView;
                             string text = "Table Name : " + ColumnName + " with Port " + getPort + ", has been deleted successfully.";
                             UpdateScreen(text, true, null, null);
+                            BindComboBoxWithAvailablePorts();
                         }
                     }
                 }
@@ -574,7 +558,6 @@ namespace RfReader_demo
                 SentrySdk.CaptureException(ex);
             }
         }
-
         #endregion
 
         #region GRID FUNCTIONS (BINDGRIDDATA)       
@@ -745,7 +728,7 @@ namespace RfReader_demo
                 text = Data;
             }
             else {
-                text = "ID : " + Data + " has been scanned on Port : " + portName + " (" + DateTime.Now + ")";
+                text = "ID : " + Data + " has been scanned on Port : " + portName + " with Table : " + tableName + " (" + DateTime.Now + ")";
             }
             if (IsLive == true && ConfigChange == false)
             {
@@ -756,18 +739,18 @@ namespace RfReader_demo
                     tblData.TableName = tableName;
                     tblData.CheckTime = DateTime.Now;
 
-                    text = "ID : " + Data + " has been scanned on Port : " + portName + " (" + DateTime.Now + ")";
+                    text = "ID : " + Data + " has been scanned on Port : " + portName + " with Table : " + tableName + " (" + DateTime.Now + ")";
                     txtLogs.Document.Blocks.Add(new Paragraph(new Run(text)));
                     InsertingLogTextToLogFile(text);
 
                     InsertionInTblStatus = Blayer.InsertDataToTable(tblData);
                     if (InsertionInTblStatus == "Data Inserted Successfully")
                     {
-                        textMessage = "ID : " + Data + " Insert in database successfully & with Port : " + portName + " (" + DateTime.Now + ")";
+                        textMessage = "ID : " + Data + " Insert in database successfully with Port : " + portName + " & Table : " + tableName + " (" + DateTime.Now + ")";
                     }
                     else
                     {
-                        textMessage = Data + " Insertion in database failed & with Port : " + portName + " (" + DateTime.Now + ") \nError: " + InsertionInTblStatus.Trim().ToString() + "";
+                        textMessage = Data + " Insertion in database failed with Port : " + portName + " & Table : " + tableName + " (" + DateTime.Now + ") \nError: " + InsertionInTblStatus.Trim().ToString() + "";
                     }
                     txtLogs.Document.Blocks.Add(new Paragraph(new Run(textMessage)));
                     InsertingLogTextToLogFile(textMessage);
@@ -798,12 +781,31 @@ namespace RfReader_demo
                 SentrySdk.CaptureException(ex);
             }           
         }
-        private bool ConnectionTest(bool fromWhere)
+        public DataTable DecryptDeviceTable(DataTable dt)
         {
-            bool connected = true;
-            if (allPortData != null)
+            if (dt != null)
             {
-                var rows = allPortData.AsEnumerable().ToList();
+                var deviceTable = dt.Copy();
+                int Index = 0;
+                foreach (DataRow dr in deviceTable.Rows)
+                {
+                    foreach (DataColumn Column in deviceTable.Columns)
+                    {
+                        dr[Column.ColumnName] = string.IsNullOrEmpty(dr[Column.ColumnName].ToString()) ? string.Empty : Crypto.Decrypt(dr[Column.ColumnName].ToString());
+                    }
+                    Index++;
+                }
+                return deviceTable;
+            }
+            return null;
+        }
+        private bool ConnectionTest(bool fromWhere)
+        {            
+            var getDeviceTable = DecryptDeviceTable(vtCommon.dsXML.Tables["Devices"]);
+            bool connected = true;            
+            if (getDeviceTable != null)
+            {
+                var rows = getDeviceTable.AsEnumerable().ToList();
                 if (rows.Count > 0)
                 {
                     for (int i = 0; i < rows.Count; i++)
